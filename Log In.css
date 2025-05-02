@@ -1,0 +1,305 @@
+/* ========== [ 1. إعادة ضبط القيم الافتراضية ] ========== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== [ 2. تنسيق الجسم العام وخلفية الصفحة ] ========== */
+body {
+  background: linear-gradient(to bottom, #101010 30%, #0f0e0e);
+  background-image: url('https://i.postimg.cc/9MmDZZb1/pexels-daniel-reche-718241-3721941.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+/* ========== [ 3. تنسيق الروابط العامة ] ========== */
+a {
+  text-decoration: none;
+  color: #D3D3D3;
+}
+
+/* ========== [ 4. تنسيق الهيدر (Header) ] ========== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+}
+
+.logo {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #D3D3D3;
+  animation: fadeInDown 1s ease forwards;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header ul li {
+  margin-right: 30px;
+  animation: fadeInDown 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+header ul li a {
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+
+header ul li a:hover,
+.active {
+  background: #D3D3D3;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+/* ========== [ 5. عنوان الصفحة الرئيسي ] ========== */
+.hero-title {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  animation: fadeInDown 1.2s ease forwards;
+}
+
+/* ========== [ 6. أنيميشن للظهور التدريجي ] ========== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== [ 7. صندوق تسجيل الدخول ] ========== */
+.login-box {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  animation: fadeInDown 1.5s ease forwards;
+  color: white;
+}
+
+.login-box h3 {
+  margin-bottom: 20px;
+  color: #cc99ff;
+  text-align: center;
+  font-size: 22px;
+}
+
+.login-box label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  position: relative;
+}
+
+.login-box input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #cc99ff;
+}
+
+.login-box input::placeholder {
+  color: #aaa;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.login-box input:focus::placeholder {
+  opacity: 0;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #cc66ff, #6699ff);
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-box button:hover {
+  background: linear-gradient(90deg, #b84dff, #4d88ff);
+}
+
+.login-box button:active {
+  transform: scale(0.97);
+}
+
+.extra-options {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.extra-options a {
+  color: #cc99ff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.extra-options a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.extra-options p {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #bbb;
+}
+
+/* ========== [ 8. تسجيل الدخول عبر الشبكات الاجتماعية ] ========== */
+.social-login {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-login p {
+  color: #ccc;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.social-btn {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.social-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-btn.fb {
+  background-color: #1877F2;
+}
+
+.social-btn.fb:hover {
+  background-color: #145dbf;
+}
+
+.social-btn.google {
+  background: linear-gradient(90deg, #f6d365, #fda085);
+  color: black;
+  border: none;
+}
+
+.social-btn.google:hover {
+  background: linear-gradient(90deg, #f9b56c, #f77f63);
+}
+
+/* ========== [ 9. الوضع الفاتح والداكن ] ========== */
+body.light-mode #Login-page {
+  background-image: url('https://i.postimg.cc/zX9jgpPw/Chat-GPT-Image-23-2025-06-28-22.png') !important;
+}
+
+body.dark-mode {
+  background-image: url('https://i.postimg.cc/9MmDZZb1/pexels-daniel-reche-718241-3721941.jpg') !important;
+}
+
+body.light-mode a {
+  color: #000;
+}
+
+body.light-mode .logo {
+  color: #000;
+}
+
+body.light-mode .login-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+body.dark-mode .login-box {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.light-mode .hero-title {
+  color: #000;
+}
+
+body.light-mode .login-box h3 {
+  color: #000;
+}
+
+body.light-mode .login-box button {
+  background: linear-gradient(90deg, #A18CD1, #FBC2EB);
+  color: #000;
+}
+
+body.light-mode .login-box button:hover {
+  background: linear-gradient(90deg, #8f7adc, #f7a7e0);
+}
+
+body.light-mode .login-box label {
+  color: #000;
+}
+
+body.light-mode .extra-options a {
+  color: #000;
+}
+
+body.light-mode .extra-options p {
+  color: #000;
+}
+
+body.light-mode .social-login p {
+  color: #000;
+}
+
+body.light-mode .login-box input {
+  background-color: #1C1C1C;
+  color: white;
+}
+
+
+
+
+

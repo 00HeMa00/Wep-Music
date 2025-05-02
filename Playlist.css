@@ -1,0 +1,255 @@
+/* ========== [ 1. إعدادات أساسية وإعادة ضبط القيم الافتراضية ] ========== */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #101010 30%, #0f0e0e); 
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  color: #fff; 
+}
+
+/* ========== [ 2. تنسيق الروابط ] ========== */
+a {
+  text-decoration: none; 
+  color: #D3D3D3; 
+}
+
+/* ========== [ 3. تنسيق الهيدر (Header) ] ========== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+}
+
+.logo {
+  font-size: 30px;
+  text-transform: uppercase; 
+  color: #D3D3D3;
+  animation: fadeInDown 1s ease forwards; 
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none; 
+}
+
+header ul li {
+  margin-right: 30px;
+  animation: fadeInDown 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0; 
+  animation-fill-mode: forwards;
+}
+
+header ul li a {
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+
+header ul li a:hover,
+.active {
+  background: #fff; 
+  color: #000; 
+  transition: all 0.3s ease;
+}
+
+/* ========== [ 4. تأثير الأنيميشن للظهور التدريجي (Fade In) ] ========== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card:nth-child(n) {
+  animation-delay: calc(0.1s * var(--i));
+}
+
+/* رسوم متحركة متدرجة للبطاقات */
+.card:nth-child(1) { --i: 1; }
+.card:nth-child(2) { --i: 2; }
+.card:nth-child(3) { --i: 3; }
+.card:nth-child(4) { --i: 4; }
+.card:nth-child(5) { --i: 5; }
+.card:nth-child(6) { --i: 6; }
+.card:nth-child(7) { --i: 7; }
+.card:nth-child(8) { --i: 8; }
+.card:nth-child(9) { --i: 9; }
+.card:nth-child(10) { --i: 10; }
+.card:nth-child(11) { --i: 11; }
+.card:nth-child(12) { --i: 12; }
+.card:nth-child(13) { --i: 13; }
+.card:nth-child(14) { --i: 14; }
+.card:nth-child(15) { --i: 15; }
+.card:nth-child(16) { --i: 16; }
+.card:nth-child(17) { --i: 17; }
+.card:nth-child(18) { --i: 18; }
+.card:nth-child(19) { --i: 19; }
+.card:nth-child(20) { --i: 20; }
+.card:nth-child(21) { --i: 21; }
+
+/* ========== [ 5. تنسيق الشبكة (Grid) ] ========== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px; 
+  padding: 20px;
+}
+
+/* ========== [ 6. تنسيق البطاقات (Card) ] ========== */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0; 
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards; 
+  cursor: pointer;
+  border: 2px solid transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-image: linear-gradient(#032155, #3f0851),
+                linear-gradient(45deg, #ff416c, #ff4b2b); 
+}
+
+/* ========== [ 7. تطبيق تأخير الأنيميشن على البطاقات ] ========== */
+.card:nth-child(n) {
+  animation-delay: calc(0.1s * var(--i)); 
+}
+
+/* ========== [ 8. تنسيق تأثيرات التمرير على البطاقة (Card Hover Effect) ] ========== */
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2),
+              0 0 30px rgba(255, 0, 102, 0.4); 
+}
+
+/* ========== [ 9. تنسيق الصورة داخل البطاقة ] ========== */
+.photo {
+  max-width: 100%;
+  border-radius: 14px; 
+  transition: transform 0.3s ease;
+}
+
+/* ========== [ 10. تنسيق معلومات الأغنية (Song Info) ] ========== */
+.song-info {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+/* ========== [ 11. تنسيق الاقتباس (Quote Styling) ] ========== */
+.quote {
+  font-size: 16px;
+  color: #d3d3d3; 
+}
+
+/* ========== [ 12. تنسيق شعار Spotify ] ========== */
+.spotify {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #b0b0b0;
+  text-shadow: 0 4px 8px rgba(251, 249, 249, 0.93);
+}
+
+/* ========== [ 13. تنسيق صندوق البحث ] ========== */
+.box {
+  height: 30px;
+  display: flex;
+  cursor: pointer;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 30px;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.box:hover input {
+  width: 400px; 
+}
+
+.box input {
+  width: 0;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  transition: 0.8s;
+  background: transparent;
+}
+
+.box a .fas {
+  color: #032155;
+  font-size: 18px;
+}
+
+/* ========== [ 14. تنسيق عنوان القسم ] ========== */
+.section-title {
+  text-align: left;
+  font-size: 36px;
+  margin-left: 40px;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+  animation: fadeInDown 1s ease-in-out; 
+}
+
+/* ========== [ 15. تأثير Hover على الصور داخل البطاقات ] ========== */
+.card:hover .photo {
+  transform: scale(1.05); 
+  transition: transform 0.3s ease;
+}
+
+/* ========== [ 16. تحديث خاص ببطاقات الأغاني في الوضع الفاتح ] ========== */
+body.light-mode .card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); 
+}
+
+body.light-mode .song-info {
+  background: none !important;
+  -webkit-text-fill-color: #1a1a1a !important; 
+  color: #1a1a1a !important;
+}
+
+/* ========== [ 17. وضع الوضع الفاتح والداكن ] ========== */
+body {
+  background-image: none !important; 
+}
+
+body.dark-mode {
+  background-color: #121212; 
+}
+
+body.light-mode {
+  background-color: #f8f9fa; 
+}
+
+

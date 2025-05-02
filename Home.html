@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melo Wave Music Studio</title>
+    <!-- ربط ملفات الـ CSS -->
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- الهيدر (الشريط العلوي) -->
+    <header>
+        <ul>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="Log In.html">Log In</a></li>
+            <li><a href="Playlists.html">Playlists</a></li>
+            <li><a href="index.html">Explore</a></li>
+            <li><a href="Home.html" class="active">Home</a></li>
+        </ul>
+        <a href="#" class="logo">MeloWave</a>
+    </header>
+    
+    <!-- شاشة الانترو (الشاشة التي تظهر في البداية) -->
+    <div class="intro-container" id="intro">
+        <div class="particles" id="particles"></div> <!-- جزيئات متحركة -->
+        <div class="logo-wrapper">
+            <div class="melo-wave">Melo Wave</div>
+            <div class="music-studio">Music Studio</div>
+            <div class="sound-wave"></div>
+        </div>
+        <div class="loading-bar"></div>
+    </div>
+    
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <div class="container">
+            <div class="header-content">
+                <!-- النصوص والبحث -->
+                <div class="header-text">
+                    <h1>Start Your Journey With Us</h1>
+                    <h2>MeloWave</h2>
+                    <div class="search-box">
+                        <input type="text" placeholder="Discover your favorite song">
+                        <button>Start With Us</button>
+                    </div>
+                </div>
+                <!-- صورة الهيدر -->
+                <div class="header-image">
+                    <div class="image-wrapper">
+                        <img src="https://img.freepik.com/free-photo/headphones-displayed-against-dark-background_157027-4466.jpg" alt="سماعات موسيقية">
+                        <div class="glow-effect"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- قسم الـ Playlists -->
+            <section class="playlists">
+                <h3>PlayLists</h3>
+                <div class="cards">
+                    <div class="card">
+                        <img src="https://i.scdn.co/image/ab67616d0000b2734dee7974cdc801c32fb27a23" alt="Late Night Vibes">
+                        <h4>Late Night Vibes</h4>
+                        <p>Chill, Lo-fi, and more</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.epagine.fr/853/5021732482853.jpg" alt="Top Hits 2025">
+                        <h4>Top Hits 2025</h4>
+                        <p>Most-streamed songs</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://d3lzcn6mbbadaf.cloudfront.net/media/details/ANI-20240705102434.jpg" alt="Indie Energy">
+                        <h4>Indie Energy</h4>
+                        <p>Feel-good indie tunes</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- قسم الـ Artists -->
+            <section class="artists">
+                <h3>Artist-List</h3>
+                <div class="artist-list">
+                    <div class="artist"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe6-GUmFfRemNwMed4ENR78lvQ4UdpBd5htg&s" alt="Artist 1"></div>
+                    <div class="artist"><img src="https://www.hamaki.me/images/featured/1089.JPG" alt="Artist 2"></div>
+                    <div class="artist"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKoKtro6E0QewJ3C6JbRjELzf6OCoJqSVgyw&s" alt="Artist 3"></div>
+                    <div class="artist"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSj44Gy7R4XJ_R9HM4vXnCnvZe2DGSeTSlyw&s" alt="Artist 4"></div>
+                    <div class="artist"><img src="https://cdn.al-ain.com/lg/images/2023/1/09/173-110525-egyptian-rap-wigs-marwan-pablo-3.jpeg" alt="Artist 5"></div>
+                </div>
+            </section>
+
+            <!-- الفوتر -->
+            <footer>
+                <div class="line"></div>
+                <div>Most Music in 2025</div>
+                <div class="line"></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- قسم "عن الفريق" -->
+    <div class="About-US">
+        <h3>About Us TeamWork</h3>
+        <p>We are a team of 5 students from the Faculty of Computer Science, Akhbar Alyoum Academy</p>
+        <p>We are always open to your feedback and suggestions</p>
+    </div> 
+
+    <!-- معلومات الاتصال -->
+    <footer>
+        <h6>Contact us at:</h6>
+        <i class="fas fa-envelope"></i>
+        <a href="">Ibrahim Mohamed</a>
+        <a href="">Omar Ayman</a>
+        <a href="">Shams Mohamed</a>
+        <a href="">Shahd Emad</a>
+        <a href="">Ibrahim Tamer</a>
+    </footer>
+
+    <!-- جافا سكريبت لإظهار الجزيئات المتحركة -->
+    <script>
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 120;
+            
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // تحديد الحجم العشوائي للجزيئات
+                const size = Math.random() * 5 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // تحديد الموقع العشوائي
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${Math.random() * 100}vh`;
+                
+                // تحديد اللون العشوائي
+                const colors = ['#00ccff', '#ff00cc', '#3333ff', '#ffffff'];
+                particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                // تحديد مدة وتأخير الأنيميشن العشوائي
+                const duration = Math.random() * 10 + 5;
+                const delay = Math.random() * 8;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `${delay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // إخفاء الـ Intro بعد 6 ثواني
+        setTimeout(() => {
+            document.getElementById('intro').style.display = 'none';
+            document.querySelector('.main-content').style.display = 'block';
+            document.querySelector('header').style.opacity = '1';
+        }, 5000);
+
+        // تشغيل الـ Particles عند تحميل الصفحة
+        window.addEventListener('load', createParticles);
+    </script>
+
+    <!-- جافا سكريبت لتحميل الوضع المحفوظ -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            }
+        });
+    </script>
+
+    <script src="theme.js"></script>
+</body>
+</html>

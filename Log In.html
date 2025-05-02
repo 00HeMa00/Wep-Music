@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MeloWave - Log In</title>
+  <link rel="stylesheet" href="Log In.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body id="Login-page">
+
+  <!-- الهيدر -->
+  <header>
+    <h2><a href="#" class="logo">MeloWave</a></h2>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="index.html">Explore</a></li>
+      <li><a href="Playlists.html">Playlists</a></li>
+      <li><a href="Log In.html" class="active">Log In</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </header>
+
+  <!-- عنوان الموقع -->
+  <section class="hero-title">
+    <h2>MeloWave</h2>
+  </section>
+
+  <!-- صندوق تسجيل الدخول -->
+  <div class="login-box">
+    <form>
+      <h3>Login</h3>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="button" onclick="window.location.href='Playlists.html'">Sign In</button>
+
+      <div class="social-login">
+        <p>or continue with</p>
+        <button type="button" class="social-btn fb">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+          Continue with Facebook
+        </button>
+        <button type="button" class="social-btn google-btn">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo">
+          Continue with Google
+        </button>
+        
+      </div>
+
+      <div class="extra-options">
+        <a href="#">Forgot Password?</a>
+        <p>Don't have an account? <a href="#">Sign Up</a></p>
+      </div>
+    </form>
+  </div>
+
+  <!-- جافاسكريبت -->
+  <script src="theme.js"></script>
+</body>
+</html>
